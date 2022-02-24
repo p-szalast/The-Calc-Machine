@@ -1,0 +1,183 @@
+/*
+
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+
+--- 02 COLORS
+
+- Primary:
+- Tints:
+- Shades: 
+- Accents:
+- Grey:
+
+--- 05 SHADOWS
+
+--- 06 BORDER RADIUS
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.877);
+  font-size: 24px;
+  font-weight: 400;
+}
+
+body {
+  /* font-family: sans-serif; */
+  font-family: 'Press Start 2P', cursive;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.486);
+}
+
+h3 {
+  text-align: center;
+}
+
+h4 {
+  color: rgb(70, 53, 53);
+  margin-bottom: 6px;
+}
+
+.container {
+  /* min-width: 12rem; */
+  max-width: 20rem;
+  margin: 1rem auto;
+  /* min-height: 70vh; */
+}
+
+.hidden {
+  display: none;
+}
+
+ul {
+  list-style: square;
+}
+
+li {
+  line-height: 2;
+}
+
+li:last-child {
+  margin-bottom: 24px;
+}
+
+.btn {
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+span {
+  font-size: 12px;
+}
+
+/************************/
+/* BUTTONS IN GRID  */
+/***********************/
+
+.btn__7 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.btn__8 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.btn__9 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.btn__4 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.btn__5 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.btn__6 {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.btn__1 {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.btn__2 {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.btn__3 {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.btn__0 {
+  grid-column: 2;
+  grid-row: 4;
+}
+
+.btn__change {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+.btn__dot {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+.btn__sum {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.btn__substract {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.btn__multiply {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.btn__divide {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.btn__exponentiations {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.btn__factorial {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.btn__equals {
+  grid-column: 1 / span 2;
+  grid-row: 4;
+}

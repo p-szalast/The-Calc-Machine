@@ -1,0 +1,18 @@
+{
+  "name": "the-calc-machine",
+  "version": "2.0.0",
+  "description": "JS Calculator",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Przemysław Szalast",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.3.2"
+  },
+  "dependencies": {
+    "core-js": "^3.21.1"
+  }
+}

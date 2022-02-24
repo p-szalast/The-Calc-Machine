@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="shortcut icon" href="img/calc-icon.jpg" type="image/x-icon" />
+
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/controller.js" defer type="module"></script>
+    <title>The Calc Machine</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- START VIEW -->
+      <div class="view__settings">
+        <h2>The Calc Machine - Abakus</h2>
+        <h3>Settings</h3>
+        <div class="settings__container">
+          <div><h4>Digits:</h4></div>
+          <div class="digits__settings">
+            <ul>
+              <li class="option__row">
+                <span>0</span>
+                <input type="checkbox" checked="ckecked" data-symbol="0" />
+              </li>
+              <li class="option__row">
+                <span>1</span>
+                <input type="checkbox" checked="ckecked" data-symbol="1" />
+              </li>
+              <li class="option__row">
+                <span>2</span>
+                <input type="checkbox" checked="ckecked" data-symbol="2" />
+              </li>
+              <li class="option__row">
+                <span>3</span>
+                <input type="checkbox" checked="ckecked" data-symbol="3" />
+              </li>
+              <li class="option__row">
+                <span>4</span>
+                <input type="checkbox" checked="ckecked" data-symbol="4" />
+              </li>
+              <li class="option__row">
+                <span>5</span>
+                <input type="checkbox" checked="ckecked" data-symbol="5" />
+              </li>
+              <li class="option__row">
+                <span>6</span>
+                <input type="checkbox" checked="ckecked" data-symbol="6" />
+              </li>
+              <li class="option__row">
+                <span>7</span>
+                <input type="checkbox" checked="ckecked" data-symbol="7" />
+              </li>
+              <li class="option__row">
+                <span>8</span>
+                <input type="checkbox" checked="ckecked" data-symbol="8" />
+              </li>
+              <li class="option__row">
+                <span>9</span>
+                <input type="checkbox" checked="ckecked" data-symbol="9" />
+              </li>
+            </ul>
+          </div>
+          <div><h4>Operations:</h4></div>
+          <div class="operations__settings">
+            <ul>
+              <li class="option__row">
+                <span>Sum</span>
+                <input
+                  type="checkbox"
+                  checked="ckecked"
+                  class="checkbox__sum"
+                  data-symbol="+"
+                />
+              </li>
+              <li class="option__row">
+                <span>Substract</span>
+                <input
+                  type="checkbox"
+                  checked="ckecked"
+                  class="checkbox__substract"
+                  data-symbol="-"
+                />
+              </li>
+              <li class="option__row">
+                <span>Multiply</span>
+                <input
+                  type="checkbox"
+                  checked="ckecked"
+                  class="checkbox__multiply"
+                  data-symbol="*"
+                />
+              </li>
+              <li class="option__row">
+                <span>Divide</span>
+                <input
+                  type="checkbox"
+                  checked="ckecked"
+                  class="checkbox__divide"
+                  data-symbol="/"
+                />
+              </li>
+              <li class="option__row">
+                <span>Exponentiations</span>
+                <input
+                  type="checkbox"
+                  checked="ckecked"
+                  class="checkbox__exponentiations"
+                  data-symbol="^"
+                />
+              </li>
+              <li class="option__row">
+                <span>Factorial</span>
+                <input
+                  type="checkbox"
+                  checked="ckecked"
+                  class="checkbox__factorial"
+                  data-symbol="!"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="section__start">
+          <button class="btn btn__start">Start</button>
+        </div>
+      </div>
+
+      <div class="view__overlay"></div>
+
+      <!-- CALCULATOR VIEW -->
+      <div class="view__calculator">
+        <section class="display">
+          <div class="display__previous"></div>
+          <div class="display__current"></div>
+          <div class="display--error-message hidden"></div>
+        </section>
+        <div class="section__buttons">
+          <section class="section__remove">
+            <button class="btn btn__nav btn__clear">C</button>
+            <button class="btn btn__nav btn__delete">DEL</button>
+            <div class="error hidden">ERROR</div>
+          </section>
+          <section class="section__options">
+            <button class="btn btn__nav btn__settings">SET</button>
+          </section>
+          <section class="section__digits">
+            <button class="btn btn__digit btn__7" data-symbol="7">7</button>
+            <button class="btn btn__digit btn__8" data-symbol="8">8</button>
+            <button class="btn btn__digit btn__9" data-symbol="9">9</button>
+            <button class="btn btn__digit btn__4" data-symbol="4">4</button>
+            <button class="btn btn__digit btn__5" data-symbol="5">5</button>
+            <button class="btn btn__digit btn__6" data-symbol="6">6</button>
+            <button class="btn btn__digit btn__1" data-symbol="1">1</button>
+            <button class="btn btn__digit btn__2" data-symbol="2">2</button>
+            <button class="btn btn__digit btn__3" data-symbol="3">3</button>
+            <button class="btn btn__change">&plusmn;</button>
+            <button class="btn btn__digit btn__0" data-symbol="0">0</button>
+            <button class="btn btn__digit btn__dot">.</button>
+          </section>
+          <section class="section__operations">
+            <button class="btn btn__operation btn__sum" data-symbol="+">
+              &plus;
+            </button>
+            <button class="btn btn__operation btn__substract" data-symbol="-">
+              &minus;
+            </button>
+            <button class="btn btn__operation btn__multiply" data-symbol="×">
+              &times;
+            </button>
+            <button class="btn btn__operation btn__divide" data-symbol="÷">
+              &divide;
+            </button>
+            <button
+              class="btn btn__operation btn__exponentiations"
+              data-symbol="^"
+            >
+              ^
+            </button>
+            <button class="btn btn__factorial" data-symbol="!">!</button>
+            <button class="btn btn__equals">&equals;</button>
+          </section>
+        </div>
+      </div>
+
+      <footer class="footer">
+        Created by Przemysław Szalast for HICRON recruitment
+      </footer>
+    </div>
+  </body>
+</html>

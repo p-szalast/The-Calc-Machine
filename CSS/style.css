@@ -1,0 +1,251 @@
+/************************/
+/**** START VIEW  ******/
+/************************/
+/************************/
+
+.view__settings {
+  position: absolute;
+  top: 10%;
+  min-width: 400px;
+  padding: 1rem;
+  margin: 10px;
+  transform: translate(-10%, -10%);
+  background-color: rgba(0, 0, 0, 0.767);
+  border: 4px solid #5a1010;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+
+.view__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 2;
+}
+
+.box__container {
+  display: flex;
+}
+
+input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+}
+
+.section__start {
+  display: flex;
+  justify-content: center;
+}
+
+.btn__start {
+  /* display: inline-block; */
+  /* position: relative; */
+  justify-content: center;
+  padding: 5px 10px;
+  background-color: #9b1f1f;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.btn__start:hover {
+  /* background-color: #5a1010; */
+  color: black;
+}
+
+h2 {
+  text-align: center;
+  /* font-size: 28px; */
+  margin-bottom: 32px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+/* .btn:hover {
+  cursor: pointer;
+} */
+
+/*************************/
+/**** CALCULATOR VIEW  ***/
+/************************/
+/************************/
+
+.view__calculator {
+  min-width: 420px;
+  display: grid;
+  margin: 10px;
+  background-color: #000;
+  border: 4px solid #000;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+/************************/
+/* DISPLAY  */
+/***********************/
+
+.display {
+  /* font-family: 'Press Start 2P', cursive; */
+  font-family: sans-serif, cursive;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 10px 20px;
+  /* margin: 5px; */
+  min-height: 100px;
+  background-color: #99a078;
+  /* box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.055); */
+  /* word-wrap: break-word; */
+}
+
+.display__previous {
+  font-size: 20px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.82);
+  word-break: break-all;
+}
+
+.display__current {
+  font-size: 36px;
+  font-weight: 300;
+  word-break: break-all;
+}
+
+.display--error-message {
+  font-size: 22px;
+  color: red;
+  color: rgb(0, 0, 0);
+}
+
+.error {
+  justify-self: center;
+  align-self: center;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: red;
+}
+
+/************************/
+/* SECTION ALL BUTTONS  */
+/***********************/
+
+.section__buttons {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(3, auto);
+}
+
+/************************/
+/* SECTION CLEAN  */
+/***********************/
+
+.section__remove {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.btn__clear {
+  flex-basis: 200px;
+}
+
+.btn__nav {
+  display: inline-block;
+  justify-content: center;
+  min-width: 3rem;
+  /* min-height: 1.5rem; */
+  background-color: #9b1f1fa9;
+}
+
+.btn__nav:hover {
+  background-color: #5a1010;
+}
+
+/************************/
+/* SECTION OPTIONS  */
+/***********************/
+
+.section__options {
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+}
+
+/* moce this */
+.option__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+}
+
+/* .btn__settings {
+  grid-column: 2;
+} */
+
+/************************/
+/* SECTION DIGITS  */
+/***********************/
+
+.section__digits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.btn__digit,
+.btn__change {
+  background-color: #767676;
+}
+
+.btn__digit:hover,
+.btn__change:hover {
+  background-color: #4b4b4b;
+}
+
+/************************/
+/* SECTION OPERATIONS  */
+/***********************/
+
+.section__operations {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, minmax(64px, auto));
+}
+
+.btn__operation,
+.btn__factorial {
+  background-color: #555555;
+}
+
+.btn__operation:hover,
+.btn__factorial:hover {
+  background-color: #3b3b3b;
+}
+
+.btn__equals {
+  grid-column: span 2;
+  background-color: #9b1f1f;
+}
+
+.btn__equals:hover {
+  background-color: #9b1f1fa9;
+  /* color: #000; */
+}
+
+/************************/
+/* FOOTER */
+/***********************/
+/***********************/
+
+.footer {
+  font-size: 10px;
+  line-height: 1.1;
+  text-align: center;
+}
