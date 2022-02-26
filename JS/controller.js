@@ -55,10 +55,11 @@ const deleteDigit = function () {
 
 const changeToNegative = function () {
   if (!model.state.curNumber) return;
-  if ((model.state.curNumber = '.')) return;
+  if (model.state.curNumber === '.') return;
 
   model.state.curNumber = (-model.state.curNumber).toString();
 
+  console.log(model.state.curNumber);
   calcView.updateDisplay(model.state);
 };
 
