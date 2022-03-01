@@ -4,7 +4,6 @@ class CalcView extends View {
   //CONTAINERS
   _digitsContainer = document.querySelector('.section__digits');
   _operationContainer = document.querySelector('.section__operations');
-  _buttonsContainer = document.querySelector('.section__buttons');
 
   //DISPLAYS
   _displayCurrent = document.querySelector('.display__current');
@@ -17,9 +16,7 @@ class CalcView extends View {
   _btnDelete = document.querySelector('.btn__delete');
   _btnSettings = document.querySelector('.btn__settings');
 
-  _btnDigit = document.querySelectorAll('.btn__digit');
   _btnChange = document.querySelector('.btn__change');
-  _btnOperator = document.querySelectorAll('.btn__operation');
   _btnFactorial = document.querySelector('.btn__factorial');
   _btnEquals = document.querySelector('.btn__equals');
 
@@ -28,22 +25,18 @@ class CalcView extends View {
   /////////////////////
 
   updateDisplay(state) {
-    if (
-      // typeof state.prevNumber !== 'string' ||
-      typeof state.curNumber !== 'string'
-    )
-      this.renderError('Unidentified Error');
+    if (typeof state.curNumber !== 'string')
+      this.renderError('❓Niezidentyfikowany błąd ');
 
     if (
       state.curNumber.toString().includes('e') ||
       state.prevNumber.toString().includes('e')
     )
       this.renderError(
-        'The number is too large or too long 🤯 Please try scientific calculator'
+        'Liczba jest zbyt wielka lub zbyt długa 🤯 Użyj proszę kalkulatora naukowego.'
       );
 
     this._displayCurrent.textContent = state.curNumber;
-    // displayPrevious.textContent = prevNumber;
 
     if (state.curOperation) {
       this._displayPrevious.textContent = state.prevNumber + state.curOperation;

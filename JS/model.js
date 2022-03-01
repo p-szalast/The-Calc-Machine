@@ -71,8 +71,6 @@ export const calcFactorial = function () {
   let num = state.curNumber;
 
   if (!checkIfNatural(num)) {
-    console.log(checkIfNatural(num));
-
     state.errorMessage =
       'Silnia dostępna tylko dla liczb naturalnych💥 Spróbuj w innym kalkulatorze.';
     return;
@@ -84,6 +82,13 @@ export const calcFactorial = function () {
     for (let i = Number(num); i >= 1; i--) {
       result = result * i;
     }
-    return result;
+  }
+
+  if (!isFinite(result)) {
+    state.errorMessage =
+      'Zbyt skomplikowana operacja 🪐. Przegrzanie procesora ';
+    return;
+  } else {
+    return result.toString();
   }
 };

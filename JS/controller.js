@@ -59,7 +59,6 @@ const changeToNegative = function () {
 
   model.state.curNumber = (-model.state.curNumber).toString();
 
-  console.log(model.state.curNumber);
   calcView.updateDisplay(model.state);
 };
 
@@ -99,8 +98,11 @@ const factorial = function () {
   model.calcFactorial();
 
   if (model.state.errorMessage) calcView.renderError(model.state.errorMessage);
-
-  model.state.curNumber = model.calcFactorial(model.state.curNumber).toString();
+  else {
+    model.state.curNumber = model
+      .calcFactorial(model.state.curNumber)
+      .toString();
+  }
   calcView.updateDisplay(model.state);
 };
 
@@ -112,12 +114,9 @@ const equals = function () {
   model.state.curOperation = undefined;
 
   if (model.state.curNumber === NaN) return;
+
   if (typeof model.state.curNumber !== 'string')
     model.state.curNumber.toString();
-
-  if (model.state.curNumber === 'Infinity')
-    model.state.errorMessage =
-      'Wynik = nieskończoność. Przegrzanie kalkulatora';
 
   if (!model.state.errorMessage) {
     model.state.curOperation = '';
