@@ -29,13 +29,14 @@ export const calculate = function () {
 
   switch (state.curOperation) {
     case '+':
-      result = a + b;
+      result = (a * 10 + b * 10) / 10;
       break;
     case '-':
-      result = a - b;
+      result = (a * 10 - b * 10) / 10;
       break;
     case '×':
-      result = a * b;
+      // prettier-ignore
+      result = ((a * 10) * (b * 10)) / 100;
       break;
     case '÷':
       if (b === 0) {
@@ -43,7 +44,8 @@ export const calculate = function () {
           'Dzielenie przez 0 nie ma sensu liczbowego🛑 Wyszyść i spróbuj ponownie.';
         break;
       }
-      result = a / b;
+      // prettier-ignore
+      result = (a * 10) / (b * 10);
       break;
     case '^':
       if (!checkIfNatural(a) || !checkIfNatural(b)) {
@@ -63,6 +65,8 @@ export const calculate = function () {
     state.curNumber = '';
     return;
   }
+
+  // result = result.toPrecision(12);
 
   state.curNumber = result.toString();
 };

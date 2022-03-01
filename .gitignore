@@ -1,2 +1,4 @@
 .parcel-cache
 .prettierrc
+package-lock.json
+dist
