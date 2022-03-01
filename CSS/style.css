@@ -5,11 +5,10 @@
 
 .view__settings {
   position: absolute;
-  top: 10%;
   min-width: 400px;
   padding: 1rem;
   margin: 10px;
-  transform: translate(-10%, -10%);
+  transform: translate(-10%, 0);
   background-color: rgba(0, 0, 0, 0.767);
   border: 4px solid #5a1010;
   border-radius: 5px;
@@ -21,7 +20,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 110%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
@@ -30,6 +29,13 @@
 
 .box__container {
   display: flex;
+}
+
+.option__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
 }
 
 input[type='checkbox'] {
@@ -44,7 +50,6 @@ input[type='checkbox'] {
 
 .btn__start {
   /* display: inline-block; */
-  /* position: relative; */
   justify-content: center;
   padding: 5px 10px;
   background-color: #9b1f1f;
@@ -52,13 +57,11 @@ input[type='checkbox'] {
 }
 
 .btn__start:hover {
-  /* background-color: #5a1010; */
   color: black;
 }
 
 h2 {
   text-align: center;
-  /* font-size: 28px; */
   margin-bottom: 32px;
 }
 
@@ -91,19 +94,14 @@ h3 {
 /***********************/
 
 .display {
-  /* font-family: 'Press Start 2P', cursive; */
   font-family: sans-serif, cursive;
-
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
   padding: 10px 20px;
-  /* margin: 5px; */
   min-height: 100px;
   background-color: #99a078;
-  /* box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.055); */
-  /* word-wrap: break-word; */
 }
 
 .display__previous {
@@ -121,7 +119,7 @@ h3 {
 
 .display--error-message {
   font-size: 22px;
-  color: red;
+  /* color: red; */
   color: rgb(0, 0, 0);
 }
 
@@ -152,15 +150,11 @@ h3 {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.btn__clear {
+/* .btn__clear {
   flex-basis: 200px;
-}
+} */
 
 .btn__nav {
-  display: inline-block;
-  justify-content: center;
-  min-width: 3rem;
-  /* min-height: 1.5rem; */
   background-color: #9b1f1fa9;
 }
 
@@ -174,20 +168,7 @@ h3 {
 
 .section__options {
   display: grid;
-  /* grid-template-columns: repeat(2, 1fr); */
 }
-
-/* moce this */
-.option__row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 80px;
-}
-
-/* .btn__settings {
-  grid-column: 2;
-} */
 
 /************************/
 /* SECTION DIGITS  */
@@ -216,7 +197,7 @@ h3 {
 .section__operations {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, minmax(64px, auto));
+  grid-template-rows: repeat(4, 64px);
 }
 
 .btn__operation,
